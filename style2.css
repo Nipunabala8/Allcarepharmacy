@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin-top: 80px;
+}
+.mobile-menu {
+    display: none;
+    
+}
+
+header {
+    background-color: rgba(79, 79, 79, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+/* Navigation */
+.sidebar {
+    position:fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(41, 40, 40,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+}
+
+.sidebar li {
+    width:100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.sidebar a{
+    width: 100%;
+}
+
+
+
+.logo img {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+
+
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}   
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1d0884;
+    border-radius: 5px;
+}
+
+/*main*/
+main {
+    padding: 20px;
+}
+
+.medicine-section {
+    margin-bottom: 30px;
+}
+
+.medicine-section h2 {
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    color:rgb(7, 39, 185);
+
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(20% - 10px);
+    max-width: 200px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+.item .description {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantity {
+    width: 60px;
+    padding: 5px;
+}
+
+.btn {
+    background: rgb(7, 39, 185);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.order-summary {
+    margin-top: 30px;
+}
+
+.order-summary h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background: rgb(7, 39, 185);;
+    color: white;
+}
+
+.total {
+    text-align: right;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+
+.remove-item {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+.favourites-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; 
+}
+
+.favourites-buttons .btn, 
+.buy-now {
+    background: #6c757d;
+    color: white;
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.favourites-buttons .btn:hover, 
+.buy-now:hover {
+    background: #5a6268;
+}
+
+.buy-now {
+    background: #28a745; 
+}
+
+.buy-now:hover {
+    background: #218838;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+    .hideonmobileview {
+        display: none;
+    }
+
+
+    .item-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: none;
+    }
+    .favourites-buttons {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+}
+        

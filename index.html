@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allcare Hospital</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+     <!-- Fixed Navigation Bar -->
+     <header>
+        <nav>
+            <div class="logo">
+                <img src="allcare.png" alt="Hospital Logo">
+            </div>
+            <ul class="nav-links">
+                <li class="hideonmobileview"><a href="home.html">Home</a></li>
+                <li class="hideonmobileview"><a href="aboutus.html">About Us</a></li>
+                <li class="hideonmobileview"><a href="services.html">Services</a></li>
+                <li class="hideonmobileview"><a href="doctors.html">Doctors</a></li>
+                <li class="hideonmobileview"><a href="reservations.html">Reservations</a></li>
+                <li class="hideonmobileview"><a href="index.html">Pharmacy</a></li>
+                <li class="mobile-menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="index.html">Pharmacy</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+    <main>
+        <!-- Analgesics Section -->
+        <section class="medicine-section">
+            <h2>Analgesics</h2>
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="aspirin.jpg" alt="Aspirin">
+                    </div>
+                    <p>Aspirin</p>
+                    <p class="description">Aspirin is a nonsteroidal anti-inflammatory drug used to reduce pain</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Aspirin" data-price="9">
+                        <button class="btn add-to-cart" data-name="Aspirin" data-price="9">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="tramadol.jpg" alt="Tramadol">
+                    </div>
+                    <p>Tramadol</p>
+                    <p class="description">Tramadol is a strong painkiller from a group of medicines called opiates</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Tramadol" data-price="13">
+                        <button class="btn add-to-cart" data-name="Tramadol" data-price="13">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="ibufrofen.jpg" alt="Ibuprofen">
+                    </div>
+                    <p>Ibuprofen</p>
+                    <p class="description">Ibuprofen is a nonsteroidal anti-inflammatory drug that is used to relieve pain</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Ibuprofen" data-price="14">
+                        <button class="btn add-to-cart" data-name="Ibuprofen" data-price="14">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="cataflam.webp" alt="Cataflam">
+                    </div>
+                    <p>Cataflam</p>
+                    <p class="description">Cataflam is a nonsteroidal anti-inflammatory drug used to treat pain  </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Cataflam" data-price="10">
+                        <button class="btn add-to-cart" data-name="Cataflam" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="oxycodone.webp" alt="Oxycodone">
+                    </div>
+                    <p>Oxycodone</p>
+                    <p class="description">Oxycodone  is used to relieve pain severe enough to require opioid treatment</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Oxycodone" data-price="5">
+                        <button class="btn add-to-cart" data-name="Oxycodone" data-price="5">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="paracetamol.png" alt="Medicine 1">
+                    </div>
+                    <p>Paracetamol</p>
+                    <p class="description">Paracetamol is a non-opioid analgesic used to treat fever </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Paracetamol" data-price="5">
+                        <button class="btn add-to-cart" data-name="Paracetamol" data-price="5">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!--Antibiotics Section-->
+        <section class="medicine-section">
+        <h2>Antibiotics</h2>
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="amoxicillin.webp" alt="Amoxicillin">
+                    </div>
+                    <p>Amoxicillin</p>
+                    <p class="description"> Amoxicillin is used to treat bacterial infections such as middle ear infection</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Amoxicillin" data-price="10">
+                        <button class="btn add-to-cart" data-name="Amoxicillin" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="azithromycin.jpg" alt="Azithromycin">
+                    </div>
+                    <p>Azithromycin</p>
+                    <p class="description">Azithromycin is used for the treatment of several bacterial infections</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Azithromycin" data-price="11">
+                        <button class="btn add-to-cart" data-name="Azithromycin" data-price="11">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="cephalexin.png" alt="Cephalexin">
+                    </div>
+                    <p>Cephalexin</p>
+                    <p class="description">Cephalexin is used to treat certain infections caused by bacteria</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Cephalexin" data-price="15">
+                        <button class="btn add-to-cart" data-name="Cephalexin" data-price="15">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="doxycycline.webp" alt="Doxycycline">
+                    </div>
+                    <p>Doxycycline</p>
+                    <p class="description">Doxycycline is used to treat bacterial infections in many different parts of the body </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Doxycycline" data-price="9">
+                        <button class="btn add-to-cart" data-name="Doxycycline" data-price="9">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="metronidazole2.jpg" alt="Metronidazole">
+                    </div>
+                    <p>Metronidazole </p>
+                    <p class="description">Metronidazole is an antibiotic and antiprotozoal medication.</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Metronidazole " data-price="8">
+                        <button class="btn add-to-cart" data-name="Metronidazole " data-price="8">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="cefdinir.jpg" alt="Cefdinir">
+                    </div>
+                    <p>Cefdinir</p>
+                    <p class="description">Cefdinir is used to treat a wide variety of bacterial infections</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Cefdinir" data-price="4">
+                        <button class="btn add-to-cart" data-name="Cefdinir" data-price="4">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!--Antidepressants Section-->
+        <section class="medicine-section">
+            <h2>Antidepressants</h2>
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="sertraline.jpg" alt="Sertraline">
+                    </div>
+                    <p>Sertraline</p>
+                    <p class="description">Sertraline is an antidepressant of the selective serotonin reuptake inhibitor class.</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Sertraline" data-price="3">
+                        <button class="btn add-to-cart" data-name="Sertraline" data-price="3">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="trazodone.webp" alt="Trazodone">
+                    </div>
+                    <p>Trazodone</p>
+                    <p class="description">Trazodone is  used to treat a combination of depression and anxiety disorder</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Trazodone" data-price="5">
+                        <button class="btn add-to-cart" data-name="Trazodone" data-price="5">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="fluoxetine.jpg" alt="Fluoxetine">
+                    </div>
+                    <p>Fluoxetine</p>
+                    <p class="description">Fluoxetine belongs to a group of medicines known as selective serotonin reuptake inhibitors</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Fluoxetine" data-price="6">
+                        <button class="btn add-to-cart" data-name="Fluoxetine" data-price="6">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="duloxetine.jpg" alt="Duloxetine">
+                    </div>
+                    <p>Duloxetine</p>
+                    <p class="description"> Duloxetine is used to treat major depressive disorder, generalized anxiety disorder </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Duloxetine" data-price="10">
+                        <button class="btn add-to-cart" data-name="Duloxetine" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="escitalopram.jpeg" alt="Escitalopram">
+                    </div>
+                    <p>Escitalopram</p>
+                    <p class="description">Escitalopram is mainly used to treat major depressive disorder and anxiety disorder</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Escitalopram" data-price="11">
+                        <button class="btn add-to-cart" data-name="Escitalopram" data-price="11">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="paroxetine.jpg" alt="Paroxetine">
+                    </div>
+                    <p>Paroxetine</p>
+                    <p class="description">Paroxetine extended-release tablets is used to treat depression, panic disorder and social anxiety </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Paroxetine" data-price="6">
+                        <button class="btn add-to-cart" data-name="Paroxetine" data-price="6">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!--Antihistamines Section-->
+        <section class="medicine-section">
+            <h2>Antihistamines</h2>
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="hydroxyzine.jpeg" alt="Hydroxyzine">
+                    </div>
+                    <p>Hydroxyzine</p>
+                    <p class="description">Hydroxyzine is used in the treatment of itchiness, anxiety, insomnia, and nausea</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Hydroxyzine" data-price="10">
+                        <button class="btn add-to-cart" data-name="Hydroxyzine" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="benadryl.jpg" alt="Benadryl">
+                    </div>
+                    <p>Benadryl</p>
+                    <p class="description">Benadryl is an antihistamine used to relieve symptoms of allergy and hay fever </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Benadryl" data-price="3">
+                        <button class="btn add-to-cart" data-name="Benadryl" data-price="3">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="zyrtec.webp" alt="Zyrtec">
+                    </div>
+                    <p>Zyrtec</p>
+                    <p class="description">Zyrtec is an antihistamine that treats symptoms such as itching,runny nose and watery eyes</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Zyrtec" data-price="5">
+                        <button class="btn add-to-cart" data-name="Zyrtec" data-price="5">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="claritin.jpg" alt="Claritin">
+                    </div>
+                    <p>Claritin</p>
+                    <p class="description">Claritin is an antihistamine that reduces the effects of natural chemical histamine in the body</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Claritin" data-price="6">
+                        <button class="btn add-to-cart" data-name="Claritin" data-price="6">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="allegra.jpg" alt="Allegra">
+                    </div>
+                    <p>Allegra</p>
+                    <p class="description">Allegra is an antihistamine pharmaceutical drug used in the treatment of allergy symptoms</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Allegra" data-price="2">
+                        <button class="btn add-to-cart" data-name="Allegra" data-price="2">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="xyzal.webp" alt="Xyzal">
+                    </div>
+                    <p>Xyzal</p>
+                    <p class="description">Xyzal is an antihistamine used to relieve allergy symptoms such as watery eyes and sneezing</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Xyzal" data-price="5">
+                        <button class="btn add-to-cart" data-name="Xyzal" data-price="5">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!--Antihypertensives Section-->
+        <section class="medicine-section">
+            <h2>Antihypertensives</h2>
+            <div class="item-container">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="amlodipine.webp" alt="Amlodipine">
+                    </div>
+                    <p>Amlodipine</p>
+                    <p class="description">Amlodipine is a calcium channel blocker medication used to treat high blood pressure</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Amlodipine" data-price="10">
+                        <button class="btn add-to-cart" data-name="Amlodipine" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="enalapril.jpg" alt="Enalapril ">
+                    </div>
+                    <p>Enalapril </p>
+                    <p class="description">Enalapril is an ACE inhibitor medication used to treat high blood pressure and heart failure</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Enalapril " data-price="4">
+                        <button class="btn add-to-cart" data-name="Enalapril " data-price="4">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="fosinopril.jpg" alt="Fosinopril">
+                    </div>
+                    <p>Fosinopril</p>
+                    <p class="description">Fosinopril is an ACE inhibitor used for the treatment of hypertension and chronic heart failure</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Fosinopril" data-price="6">
+                        <button class="btn add-to-cart" data-name="Fosinopril" data-price="6">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="quinapril.jpg" alt="Quinapril">
+                    </div>
+                    <p>Quinapril</p>
+                    <p class="description">Quinapril is a medication used to treat high blood pressure, heart failure and diabetic kidney disease </p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Quinapril" data-price="10">
+                        <button class="btn add-to-cart" data-name="Quinapril" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="captopril.jpg" alt="Captopril">
+                    </div>
+                    <p>Captopril</p>
+                    <p class="description">Captopril is used for the treatment of hypertension and some types of congestive heart failure</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Captopril" data-price="4">
+                        <button class="btn add-to-cart" data-name="Captopril" data-price="4">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-image">
+                        <img src="perindopril.jpg" alt="Perindopril">
+                    </div>
+                    <p>Perindopril</p>
+                    <p class="description">Perindopril is a medication used to treat high blood pressure, heart failure  or coronary artery disease</p>
+                    <div class="item-actions">
+                        <input type="number" min="0" value="0" class="quantity" data-name="Perindopril" data-price="2">
+                        <button class="btn add-to-cart" data-name="Perindopril" data-price="2">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+
+       
+        <!-- Order Summary Section -->
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTable">
+                    <!-- Items will be  added here -->
+                </tbody>
+            </table>
+            <div class="total">
+                <p>Total Price: $<span id="totalPrice">0.00</span></p>
+            </div>
+           
+            <div class="favourites-buttons">
+                <button id="addToFavourites" class="btn">Add to Favourites</button>
+                <button id="applyFavourites" class="btn">Apply Favourites</button>
+                <button class="btn buy-now" id="buyNow">Buy Now</button>
+            </div>
+        </section> 
+        
+        
+    <script src="main.js"></script>    
+</body>    

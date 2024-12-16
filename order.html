@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allcare Hospital</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+     <!-- Fixed Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="allcare.png" alt="Hospital Logo">
+            </div>
+            <ul class="nav-links">
+                <li class="hideonmobileview"><a href="home.html">Home</a></li>
+                <li class="hideonmobileview"><a href="aboutus.html">About Us</a></li>
+                <li class="hideonmobileview"><a href="services.html">Services</a></li>
+                <li class="hideonmobileview"><a href="doctors.html">Doctors</a></li>
+                <li class="hideonmobileview"><a href="reservations.html">Reservations</a></li>
+                <li class="hideonmobileview"><a href="index.html">Pharmacy</a></li>
+                <li class="mobile-menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="index.html">Pharmacy</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+
+    <main>
+        <!-- Order Details -->
+        <section class="order-details">
+            <h2>Your Order</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="orderSummary">
+                    <!-- Order Summary -->
+                </tbody>
+            </table>
+            <div class="total">
+                <p>Total Price: $<span id="totalPrice">0.00</span></p>
+            </div>
+        </section>
+
+        <!-- Personal Information -->
+        <h2>PERSONAL INFORMATION</h2>
+    <form id="checkoutForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName"placeholder="Enter your first name" required>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName"placeholder="Enter your last name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone"placeholder="Enter your phone number" required>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3"placeholder="Enter your address"  required></textarea>
+
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" name="postalCode" placeholder="Enter your postal code"required>
+         <!-- Payment Details -->
+        <h2>PAYMENT DETAILS</h2>
+
+        <label for="cardNumber">Credit Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber"placeholder="Enter your credit card number" required>
+
+        <label for="securityCode">Security Code</label>
+        <input type="text" id="securityCode" name="securityCode" placeholder="***"required>
+
+        <label for="expirationDate">Expiration Date</label>
+        <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+
+        <button type="submit" class="btn">Pay</button>
+    </form>
+</section>
+    </main>
+    <script src="order.js"></script>
+</body>
+</html> 
